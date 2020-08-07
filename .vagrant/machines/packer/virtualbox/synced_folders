@@ -1,0 +1,1 @@
+{"virtualbox":{"/home/ubuntu/packer":{"guestpath":"/home/ubuntu/packer","hostpath":"/Users/samirdjaafer/code/Final_Project/packer-vm/packer","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"/Users/samirdjaafer/code/Final_Project/packer-vm","disabled":false,"__vagrantfile":true}}}

@@ -1,0 +1,33 @@
+{
+  "variables": {
+    "aws_access_key": "{{env `aws_access_key`}}",
+    "aws_secret_key": "{{env `aws_secret_key`}}"
+  },
+"builders": [{
+  "type": "amazon-ebs",
+  "access_key": "{{user `aws_access_key`}}",
+  "secret_key": "{{user `aws_secret_key`}}",
+  "region": "eu-west-1",
+  "source_ami": "ami-008320af74136c628",
+  "instance_type": "t2.micro",
+  "ssh_username": "ubuntu",
+  "force_deregister": "true",
+  "force_delete_snapshot": "true",
+  "ami_name": "Packer-Hacker-AMI-Samir",
+       "ami_description": "Latest AMI creation for the Hacker app, created using Packer",
+  "tags": {
+       "Name": "Packer-Hacker-AMI-Samir"
+        }
+      }
+],
+"provisioners": [
+{
+  "type": "ansible",
+  "playbook_file": "./prov-playbook.yml"
+}]
+}
+
+
+
+
+

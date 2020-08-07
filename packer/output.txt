@@ -1,0 +1,41 @@
+[1;32mamazon-ebs output will be in this color.[0m
+
+[1;32m==> amazon-ebs: Force Deregister flag found, skipping prevalidating AMI Name[0m
+[0;32m    amazon-ebs: Found Image ID: ami-008320af74136c628[0m
+[1;32m==> amazon-ebs: Creating temporary keypair: packer_5f297c72-7a9f-e970-1a66-0b97fe53b4be[0m
+[1;32m==> amazon-ebs: Creating temporary security group for this instance: packer_5f297c73-3f28-e7fd-4b1c-96bde8f52dd2[0m
+[1;32m==> amazon-ebs: Authorizing access to port 22 on the temporary security group...[0m
+[1;32m==> amazon-ebs: Launching a source AWS instance...[0m
+[0;32m    amazon-ebs: Instance ID: i-0c29538a3208be135[0m
+[1;32m==> amazon-ebs: Waiting for instance (i-0c29538a3208be135) to become ready...[0m
+[1;32m==> amazon-ebs: Adding tags to source instance[0m
+[0;32m    amazon-ebs: Adding tag: "Name": "Packer Builder"[0m
+[1;32m==> amazon-ebs: Waiting for SSH to become available...[0m
+[1;32m==> amazon-ebs: Connected to SSH![0m
+[1;32m==> amazon-ebs: Stopping the source instance...[0m
+[0;32m    amazon-ebs: Stopping instance, attempt 1[0m
+[1;32m==> amazon-ebs: Waiting for the instance to stop...[0m
+[1;32m==> amazon-ebs: Deregistered AMI Packer-Hacker-AMI-Samir, id: ami-08480471483b9f2a6[0m
+[1;32m==> amazon-ebs: Deleted snapshot: snap-0a232a208967d5a43[0m
+[1;32m==> amazon-ebs: Creating the AMI: Packer-Hacker-AMI-Samir[0m
+[0;32m    amazon-ebs: AMI: ami-0790c8a6ed4502a1c[0m
+[1;32m==> amazon-ebs: Waiting for AMI to become ready...[0m
+[1;32m==> amazon-ebs: Modifying attributes on AMI (ami-0790c8a6ed4502a1c)...[0m
+[0;32m    amazon-ebs: Modifying: description[0m
+[1;32m==> amazon-ebs: Modifying attributes on snapshot (snap-09e868c56aa67ae80)...[0m
+[1;32m==> amazon-ebs: Adding tags to AMI (ami-0790c8a6ed4502a1c)...[0m
+[1;32m==> amazon-ebs: Tagging snapshot: snap-09e868c56aa67ae80[0m
+[1;32m==> amazon-ebs: Creating AMI tags[0m
+[0;32m    amazon-ebs: Adding tag: "Name": "Packer-Hacker-AMI-Samir"[0m
+[1;32m==> amazon-ebs: Creating snapshot tags[0m
+[1;32m==> amazon-ebs: Terminating the source AWS instance...[0m
+[1;32m==> amazon-ebs: Cleaning up any extra volumes...[0m
+[1;32m==> amazon-ebs: No volumes to clean up, skipping[0m
+[1;32m==> amazon-ebs: Deleting temporary security group...[0m
+[1;32m==> amazon-ebs: Deleting temporary keypair...[0m
+[1;32mBuild 'amazon-ebs' finished.[0m
+
+==> Builds finished. The artifacts of successful builds are:
+--> amazon-ebs: AMIs were created:
+
+eu-west-1: ami-0790c8a6ed4502a1c
